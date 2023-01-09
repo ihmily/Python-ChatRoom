@@ -242,7 +242,7 @@ class ChatClient():
                         jsondata = json.dumps(json_data, ensure_ascii=False)
                         sock.sendto(jsondata.encode('utf-8'), server)
                         self.scr1.configure(state=NORMAL)
-                        self.scr1.insert("end", "{} {}:\n".format(name, now_time), 'green')
+                        self.scr1.insert("end", "{} {}:\n".format(self.name, now_time), 'green')
                         self.scr1.insert("end", f'你已拒绝接收{fileType}', 'shengzise')
                         self.scr1.insert("end", f' |来源:{json_data["send_user"]}\n', 'zise')
                         self.scr1.see(END)
